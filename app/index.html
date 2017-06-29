@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KiedyDojdzieKasa.pl</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <img src="images/logo.png" alt="">
+    </header>
+    <section class="calculator">
+      <h1 class="main-header">
+        Kiedy <span class="green">dojdzie</span> kasa
+      </h1>
+      <p class="calculator-text">
+        Kalkulator czasu przelewu - oblicz,<br>
+kiedy pieniędze będą na Twoim koncie
+      </p>
+      <form action="" class="calculator-form">
+        <div class="input-row">
+          <select name="" id="">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+            <option value="f">f</option>
+          </select>
+        </div>
+        <div class="input-row double">
+          <input type="date">
+          <input type="date">
+        </div>
+        <div class="input-row">
+          <select name="" id="">
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <option value="e">e</option>
+            <option value="f">f</option>
+          </select>
+        </div>
+        <input type="submit" value="Oblicz!" class="button count">
+      </form>
+    </section>
+  </main>
+  <script>
+    $(document).ready(function(){
+      $('select').select2();
+    })
+  </script>
+</body>
+</html>
