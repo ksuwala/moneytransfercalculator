@@ -24,10 +24,6 @@ gulp.task('sass', function(){
   return gulp.src('./app/css/main.sass')
   .pipe(sass())
   .pipe(gulp.dest('app/css'))
-  .pipe(autoprefixer({
-    borwsers: ['last 2 versions'],
-    cascade: false
-  }))
   .pipe(browserSync.reload({
     stream: true
   }))

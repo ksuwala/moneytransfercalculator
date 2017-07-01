@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <title>KiedyDojdzieKasa.pl</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/jquery.datetimepicker.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/main.js">
+  <script src="js/main.js"/>
+
 </head>
 <body>
   <main class="container">
@@ -38,8 +41,8 @@
             </select>
           </div>
           <div class="input-row double">
-            <input type="date">
-            <input type="date">
+            <input type="text" class="timepicker">
+            <input type="text" class="datepicker">
           </div>
           <div class="input-row">
             <select name="" id="">
@@ -51,7 +54,10 @@
               <option value="f">f</option>
             </select>
           </div>
-          <input type="submit" value="Oblicz!" class="button count">
+          <div class="form-actions">
+            <input type="submit" value="Oblicz!" class="button count">
+          </div>
+
         </form>
       </section>
     </section>

@@ -67,23 +67,45 @@ header {
         font-size: 1.8rem;
         height: 5.7rem;
         width: 100%; }
-      .calculator .calculator-form .input-row.double input {
-        width: 50%; }
+      .calculator .calculator-form .input-row.double {
+        justify-content: space-between; }
+        .calculator .calculator-form .input-row.double input {
+          position: relative;
+          width: 220px;
+          border-radius: 5px;
+          border: 1px solid #d5d5d5;
+          background-color: #ffffff;
+          padding: 0 2rem;
+          cursor: pointer; }
+          .calculator .calculator-form .input-row.double input.timepicker {
+            background: url("../images/input-icons.png") no-repeat 0 1px;
+            background-position: 195px; }
+          .calculator .calculator-form .input-row.double input.datepicker {
+            background: url("../images/input-icons.png") no-repeat -247px 0;
+            background-position: -55px; }
+    .calculator .calculator-form .form-actions {
+      text-align: center; }
     .calculator .calculator-form .select2-container--default .select2-selection--single {
       height: 5.7rem;
       font-size: 1.8rem;
       width: 100%; }
     .calculator .calculator-form .select2-container--default .select2-selection--single .select2-selection__rendered {
-      line-height: 5.7rem; }
+      line-height: 5.7rem;
+      padding: 0 2rem; }
     .calculator .calculator-form .select2-selection__arrow {
       top: 50%;
       margin-top: -13px; }
+    .calculator .calculator-form .select2-container--default .select2-selection--single {
+      border-radius: 5px;
+      border: 1px solid #d5d5d5;
+      background-color: #ffffff; }
 
 .button {
   color: #ffffff;
   font-size: 18px;
   font-weight: 700;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 20rem; }
   .button.count {
     transition: all .5s linear;
     height: 5.5rem;
@@ -103,3 +125,12 @@ header {
 
 .select2-selection__arrow b {
   display: none; }
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current {
+  background: #67ce4e; }
+
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+  background: #67ce4e !important; }
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover {
+  background: #67ce4e !important; }
