@@ -1,7 +1,11 @@
 $(document).ready(function(){
   jQuery.datetimepicker.setLocale('pl');
 
-  $('select').select2();
+  $('select').select2({
+    placeholder: $(this).data('placeholder')
+  });
+
+
   $('.timepicker').datetimepicker({
     datepicker: false,
     format: 'H:i'
