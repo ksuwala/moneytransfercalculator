@@ -193,6 +193,15 @@ header {
 .select2-selection__arrow b {
   display: none; }
 
+.select2-search--dropdown .select2-search__field {
+  height: 5rem; }
+
+.select2-results__option {
+  height: 5rem;
+  line-height: 4.5rem;
+  font-family: Nunito;
+  font-size: 1.8rem; }
+
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current {
   background: #67ce4e; }
 

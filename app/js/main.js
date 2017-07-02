@@ -44,14 +44,24 @@ $(document).ready(function(){
 
   $('.timepicker').datetimepicker({
     datepicker: false,
-    format: 'H:i'
+    mask: true,
+    format: 'H:i',
+    step: 30,
+    onGenerate:function( ct ){
+      jQuery(this).find('.xdsoft_time')
+        .toggleClass('xdsoft_disabled');
+    },
   })
   $('.datepicker').datetimepicker({
     timepicker: false,
     format: 'd/m/Y',
     minDate: 0,
     value: 0,
-    defaultDate: new Date()
+    mask: true,
+    onGenerate:function( ct ){
+      jQuery(this).find('.xdsoft_date')
+        .toggleClass('xdsoft_disabled');
+    }
   })
 
   $('.calculator-form').on('submit', function(e){
