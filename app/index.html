@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>KiedyDojdzieKasa.pl</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -23,44 +24,92 @@
         <img src="images/banks.png">
       </div>
       <section class="calculator">
-        <h1 class="main-header">
-          Kiedy <span class="green">dojdzie</span> kasa
-        </h1>
-        <p class="calculator-text">
-          Kalkulator czasu przelewu - oblicz,<br> kiedy pieniędze będą na Twoim koncie
-        </p>
-        <form action="" class="calculator-form">
-          <div class="input-row">
-            <select name="" id="" data-placeholder="Nazwa banku nadawcy">
-              <option></option>
-              <option value="a">a</option>
-              <option value="b">b</option>
-              <option value="c">c</option>
-              <option value="d">d</option>
-              <option value="e">e</option>
-              <option value="f">f</option>
-            </select>
+        <div class="calculator-content">
+          
+          <h1 class="main-header">
+            Kiedy <span class="green">dojdzie</span> kasa
+          </h1>
+          <p class="calculator-text">
+            Kalkulator czasu przelewu - oblicz,<br> kiedy pieniędze będą na Twoim koncie
+          </p>
+          <form action="" class="calculator-form">
+            <div class="input-row">
+              <select name="" id="" data-placeholder="Nazwa banku nadawcy">
+                <option></option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+              </select>
+            </div>
+            <div class="input-row double">
+              <input type="text" class="timepicker">
+              <input type="text" class="datepicker">
+            </div>
+            <div class="input-row">
+              <select name="" id="" data-placeholder="Nazwa banku odbiorcy">
+                <option></option>
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+                <option value="d">d</option>
+                <option value="e">e</option>
+                <option value="f">f</option>
+              </select>
+            </div>
+            <div class="form-actions">
+              <input type="submit" value="Oblicz!" class="button count">
+            </div>
+          </form>
+        </div>
+        <div class="calculator-success">
+          <div class="banks-names">
+            <span class="bank-name">mBank</span>
+              <img src="/images/arrow-right.svg" alt="">
+            <span class="bank-name">CitiHandlowy</span>
           </div>
-          <div class="input-row double">
-            <input type="text" class="timepicker">
-            <input type="text" class="datepicker">
+          <div class="transfer-informations">
+            <table class="when-transfer">
+              <tr>
+                <td>Przelew wykonano:</td>
+                <td>
+                  <img src="images/datepicker-ico.png" alt="">
+                  <span>20.06.2017</span>
+                </td>
+                <td>
+                  <img src="images/timepicker-ico.png" alt="">
+                  <span>16:00</span>
+                </td>
+              </tr>
+            </table>
+            <table class="transfer-info">
+              <tr>
+                <td>mBank</td>
+                <td>księgowanie</td>
+                <td>7:00</td>
+              </tr>
+              <tr>
+                <td>Elixir</td>
+                <td>Pierwsza sesja</td>
+                <td>11:00</td>
+              </tr>
+            </table>
+            <div class="transfer-arrival">
+              <span class="bank-name">
+                ING Bank:
+              </span>
+              <span class="bank-arrival-date">
+                <img src="/images/datepicker-ico.png" alt="">30.06.2017
+              </span>         
+              <span class="bank-arrival-time">
+                <img src="/images/timepicker-ico.png" alt="">
+                11:00
+              </span>
+            </div>
           </div>
-          <div class="input-row">
-            <select name="" id="" data-placeholder="Nazwa banku odbiorcy">
-              <option></option>
-              <option value="a">a</option>
-              <option value="b">b</option>
-              <option value="c">c</option>
-              <option value="d">d</option>
-              <option value="e">e</option>
-              <option value="f">f</option>
-            </select>
-          </div>
-          <div class="form-actions">
-            <input type="submit" value="Oblicz!" class="button count">
-          </div>
-
-        </form>
+        </div>
       </section>
     </section>
   </main>

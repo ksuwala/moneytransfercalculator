@@ -17,4 +17,12 @@ $(document).ready(function(){
     value: 0,
     defaultDate: new Date()
   })
+
+  $('.calculator-form').on('submit', function(e){
+    e.preventDefault();
+    $('.calculator-content').fadeOut('slow', function(){
+      $('.calculator-success').fadeIn('slow')
+    })
+    
+  })
 })

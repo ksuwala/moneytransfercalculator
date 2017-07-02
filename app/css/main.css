@@ -20,6 +20,9 @@ body {
   background-image: url("../images/calc-bg.png");
   background-position: 50% 100%;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 610px) {
+    .container {
+      background-image: none; } }
 
 header {
   display: flex;
@@ -32,6 +35,9 @@ header {
 
 .calculator-images {
   display: flex; }
+  @media screen and (max-width: 610px) {
+    .calculator-images {
+      display: none; } }
 
 .calculator {
   padding: 3.7rem 5.4rem;
@@ -40,7 +46,12 @@ header {
   border: 1px solid rgba(213, 213, 213, 0.52);
   background-color: #ffffff;
   position: relative;
-  width: 56.5rem; }
+  width: 56.5rem;
+  height: 50rem; }
+  @media screen and (max-width: 570px) {
+    .calculator {
+      width: 37rem;
+      padding: 3.7rem 2.5rem; } }
   .calculator .main-header {
     font-size: 3.8rem;
     color: #3d2687;
@@ -68,21 +79,22 @@ header {
         height: 5.7rem;
         width: 100%; }
       .calculator .calculator-form .input-row.double {
-        justify-content: space-between; }
+        justify-content: space-between;
+        flex-direction: row; }
         .calculator .calculator-form .input-row.double input {
           position: relative;
-          width: 220px;
+          width: 48%;
           border-radius: 5px;
           border: 1px solid #d5d5d5;
           background-color: #ffffff;
           padding: 0 2rem;
           cursor: pointer; }
           .calculator .calculator-form .input-row.double input.timepicker {
-            background: url("../images/input-icons.png") no-repeat 0 1px;
-            background-position: 195px; }
+            background: url("../images/timepicker-ico.png") no-repeat;
+            background-position: 95% 50%; }
           .calculator .calculator-form .input-row.double input.datepicker {
-            background: url("../images/input-icons.png") no-repeat -247px 0;
-            background-position: -55px; }
+            background: url("../images/datepicker-ico.png") no-repeat;
+            background-position: 95% 50%; }
     .calculator .calculator-form .form-actions {
       text-align: center; }
     .calculator .calculator-form .select2-container--default .select2-selection--single {
@@ -99,6 +111,61 @@ header {
       border-radius: 5px;
       border: 1px solid #d5d5d5;
       background-color: #ffffff; }
+
+.calculator-success {
+  display: none; }
+  .calculator-success .banks-names {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10rem; }
+  .calculator-success .bank-name {
+    color: #3d2687;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px; }
+  .calculator-success .when-transfer {
+    width: 100%;
+    font-size: 16px;
+    color: #2b2e28;
+    font-weight: 400; }
+    .calculator-success .when-transfer td {
+      line-height: 29px;
+      width: 10rem; }
+      .calculator-success .when-transfer td img {
+        vertical-align: text-top; }
+  .calculator-success .transfer-info {
+    width: 100%;
+    font-size: 16px;
+    color: #2b2e28;
+    font-weight: 400; }
+    .calculator-success .transfer-info td:nth-child(1), .calculator-success .transfer-info td:nth-child(3) {
+      color: #2b2e28;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 29px;
+      text-transform: none; }
+    .calculator-success .transfer-info td {
+      width: 10rem;
+      color: #a5a7a2;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 29px;
+      text-transform: uppercase; }
+  .calculator-success .transfer-arrival {
+    border-radius: 5px;
+    margin-top: 2rem;
+    background-color: #f0f9d3;
+    padding: 1.5rem;
+    color: #2b2e28;
+    font-size: 22px;
+    line-height: 29px; }
+    .calculator-success .transfer-arrival .bank-name {
+      font-weight: 400;
+      margin-right: 1rem; }
+    .calculator-success .transfer-arrival .bank-arrival-date, .calculator-success .transfer-arrival .bank-arrival-time {
+      font-weight: 700; }
+      .calculator-success .transfer-arrival .bank-arrival-date img, .calculator-success .transfer-arrival .bank-arrival-time img {
+        padding-right: 0.5rem; }
 
 .button {
   color: #ffffff;
